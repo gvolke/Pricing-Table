@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  body {    
+    background: linear-gradient(to bottom, var(--blue) 50vh, var(--page-background) 50vh);    
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
+  #title {
+    color: white;
+    padding: 30px;
+    gap: 25px;    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #title h1{
+    font-size: 40px;
+  }
+
+  #title p {
+    font-size: 20px;
+  }
+
+  #container-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 0 150px 0 150px;
+    gap: 25px;    
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;        
+
+    background-color: white;
+    border-radius: 15px;
+
+    position: relative;
+    height: 450px;    
+  }
+
+  #header, #header-popular {
+    padding: 25px 35px 20px 35px;
+  }
+
+  #header-popular {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--yellow);        
+    border-radius: 15px 15px 0 0;
+  }
+
+  #card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px 35px 0 35px;
+  }
+
+  #popular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    background-color: var(--blue);    
+    border-radius: 20px;
+
+    height: 35px;
+    width: 110px;
+  }
+
+  #price {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  #price span {
+    font-weight: normal;
+    color: #828799;
+    font-size: 20px;
+  }
+
+  #card p {
+    color: var(--gray);
+    font-size: 16px;
+  }
+
+  #card ul{
+    list-style: url(./images/check.svg);       
+    padding-left: 20px; 
+  }
+
+  #card ul li{
+    color: var(--gray);
+    font-size: 16px;
+    
+    padding: 5px;
+  }
+
+  #card button {
+    height: 50px;
+    width: 75%;
+
+    background-color: var(--page-background);
+    border: var(--blue) 2px solid;
+    border-radius: 10px;
+
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: bold;
+
+    align-self: center;    
+
+    position: absolute;
+    bottom: 0;
+  }
+
+  #card button:hover {
+    cursor: pointer;
+
+    background-color: var(--blue);
+    color: white;
+  }
