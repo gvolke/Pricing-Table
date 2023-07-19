@@ -15,24 +15,30 @@
   }
 
   body {    
-    background: linear-gradient(to bottom, var(--blue) 50vh, var(--page-background) 50vh);    
+    background: linear-gradient(to bottom, var(--blue) 60vh, var(--page-background) 40vh);    
     height: 100vh;
     background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
   }
 
   #title {
     color: white;
     padding: 30px;
-    gap: 25px;    
+    gap: 30px;    
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    margin-top: 60px;
   }
 
   #title h1{
-    font-size: 40px;
+    font-size: 50px;
   }
 
   #title p {
@@ -42,21 +48,24 @@
   #container-cards {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    
-    padding: 0 150px 0 150px;
+    flex-wrap: wrap;
+
+    padding: 0px 120px 0px 120px;
     gap: 25px;    
   }
 
   #card {
     display: flex;
-    flex-direction: column;        
-
+    flex-direction: column;            
+    
     background-color: white;
     border-radius: 15px;
 
     position: relative;
-    height: 450px;    
+    height: 500px;    
+    width: 350px;
   }
 
   #header, #header-popular {
@@ -71,6 +80,10 @@
 
     background-color: var(--yellow);        
     border-radius: 15px 15px 0 0;
+  }
+
+  #header-popular h2 {
+    color: var(--blue);
   }
 
   #card-content {
@@ -139,6 +152,7 @@
 
     position: absolute;
     bottom: 0;
+    margin-bottom: 15px;
   }
 
   #card button:hover {
@@ -147,3 +161,19 @@
     background-color: var(--blue);
     color: white;
   }
+
+  @media screen and (max-width: 600px) { 
+    #container-cards {      
+      padding: 0px 70px 0px 70px;         
+    }
+
+    #title h1, #title p {
+      text-align: center; /* Centraliza novamente o texto horizontalmente (opcional, caso o texto esteja alinhado à esquerda por padrão) */
+    }
+
+    body{
+      background: linear-gradient(to bottom, var(--blue) 80vh, var(--page-background) 20vh); 
+      background-attachment: fixed;
+      height: 100vh;
+    }
+}
